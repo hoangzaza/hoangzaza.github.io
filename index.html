@@ -1,9 +1,883 @@
-﻿<html>
+<!doctype html>
+<html>
+
 <head>
-<title>Hoàng đẹp trai</title>
+    <title>制作指示書</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery/jquery.ui.touch-punch.min.js"></script>  
+    <script src="./js/main.bundle.js"></script>    
+    <script type="text/javascript" src="./js/event/shape3D_event.js"></script>
+    <script src="mainScreen.js"></script>
+
+    <style>
+        .choose_shape {
+            fill: #f06 !important;
+        }
+    </style>
 
 </head>
+
 <body>
+<div id="divBody" style="position: relative; left: 0px; top: 0px; overflow: hidden;display: block">
+    <svg class="rootSVG" width="1200" height="818" viewBox="0 0 1200 818" id="rootSVG" xmlns="http://www.w3.org/2000s/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         style="left: 0px;">
+
+
+        <defs>
+            <style xmlns="http://www.w3.org/2000/svg">.cls-1 {
+                fill: #f5f3ed;
+            }
+
+            .cls-2 {
+                fill: #e3e3e3;
+            }
+
+            .cls-3 {
+                fill: #f1f1f1;
+            }
+
+            .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-32, .cls-33, .cls-4, .cls-5 {
+                fill: none;
+            }
+
+            .cls-32, .cls-33, .cls-4, .cls-5 {
+                stroke: #fff;
+                stroke-miterlimit: 10;
+            }
+
+            .cls-4 {
+                stroke-width: 4px;
+            }
+
+            .cls-12, .cls-13, .cls-26, .cls-27, .cls-28, .cls-5 {
+                stroke-width: 3px;
+            }
+
+            .cls-38, .cls-6 {
+                font-size: 20px;
+            }
+
+            .cls-6 {
+                fill: #717171;
+            }
+
+            .cls-29, .cls-38, .cls-6, .cls-8 {
+                font-family: ShinMGoPro-Bold, ShinMGoPro Bold-90ms-RKSJ-H;
+            }
+
+            .cls-10, .cls-29, .cls-38, .cls-6, .cls-8 {
+                font-weight: 700;
+            }
+
+            .cls-7 {
+                letter-spacing: 0.25em;
+            }
+
+            .cls-8 {
+                font-size: 24px;
+                fill: #f06;
+            }
+
+            .cls-35, .cls-9 {
+                fill: #009fe8;
+            }
+
+            .cls-10 {
+                font-size: 42px;
+                font-family: ShinMGoPro-DeBold, ShinMGoPro DeBold-90ms-RKSJ-H;
+            }
+
+            .cls-10, .cls-12, .cls-29, .cls-41 {
+                fill: #fff;
+            }
+
+            .cls-11 {
+                fill: #7baaf7;
+            }
+
+            .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25 {
+                stroke: #717171;
+            }
+
+            .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28 {
+                stroke-linejoin: round;
+            }
+
+            .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-32, .cls-33 {
+                stroke-width: 2px;
+            }
+
+            .cls-14 {
+                stroke-dasharray: 6.06 4.04;
+            }
+
+            .cls-15 {
+                stroke-dasharray: 6.06 4.04;
+            }
+
+            .cls-16 {
+                stroke-dasharray: 6.18 4.12;
+            }
+
+            .cls-17 {
+                stroke-dasharray: 5.94 3.96;
+            }
+
+            .cls-18 {
+                stroke-dasharray: 6.7 4.46;
+            }
+
+            .cls-19 {
+                stroke-dasharray: 5.85 3.9;
+            }
+
+            .cls-20 {
+                stroke-dasharray: 6.11 4.07;
+            }
+
+            .cls-21 {
+                stroke-dasharray: 6.9 4.6;
+            }
+
+            .cls-22 {
+                stroke-dasharray: 4.72 3.15;
+            }
+
+            .cls-23, .cls-26 {
+                stroke-dasharray: 5.23 3.49;
+            }
+
+            .cls-24, .cls-27 {
+                stroke-dasharray: 5.11 3.41;
+            }
+
+            .cls-25, .cls-28 {
+                stroke-dasharray: 5.03 3.35;
+            }
+
+            .cls-26, .cls-27, .cls-28 {
+                stroke: #717071;
+            }
+
+            .cls-29, .cls-35 {
+                font-size: 36px;
+            }
+
+            .cls-30 {
+                fill: #b2e2f8;
+            }
+
+            .cls-31 {
+                fill: #b2deb2;
+            }
+
+            .cls-32 {
+                stroke-linecap: round;
+            }
+
+            .cls-34 {
+                fill: #ffb2d1;
+            }
+
+            .cls-35 {
+                font-family: ShinMGoPro-Ultra, ShinMGoPro Ultra-90ms-RKSJ-H;
+            }
+
+            .cls-36 {
+                letter-spacing: -0.03em;
+            }
+
+            .cls-37 {
+                letter-spacing: 0.19em;
+            }
+
+            .cls-39 {
+                letter-spacing: 0.01em;
+            }
+
+            .cls-40 {
+                letter-spacing: -0.5em;
+            }
+
+            .modal {
+                text-align: center;
+                padding: 0 !important;
+            }
+
+            .modal:before {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+                margin-right: -4px;
+            }
+
+            .modal-dialog {
+                display: inline-block;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            .cls2-1 {
+                opacity: 0.4;
+            }
+
+            .cls2-2 {
+                fill: #f5f3ed;
+            }
+
+            .cls2-3 {
+                fill: #fff;
+            }
+
+            .cls2-3, .cls-4 {
+                stroke: #009100;
+                stroke-linejoin: round;
+                stroke-width: 6px;
+            }
+
+            .cls2-4 {
+                fill: none;
+            }
+
+            .cls2-5 {
+                font-size: 30px;
+                fill: #717171;
+                font-family: ShinMGoPro-Bold, ShinMGoPro Bold-90ms-RKSJ-H;
+                font-weight: 700;
+            }
+            .cls-101 {
+                fill: #009100;
+            }
+
+            .cls-102 {
+                fill: #009fe8;
+            }
+
+            .cls-103 {
+                fill: #ff0066;
+            }
+
+            .clsd-2 {
+                fill: #f5f3ed;
+            }
+
+            .clsd-3 {
+                fill: #e3e3e3;
+            }
+
+            .clsd-21, .clsd-4 {
+                fill: #009fe8;
+            }
+
+            .clsd-5 {
+                font-size: 42px;
+                font-family: ShinMGoPro-DeBold, ShinMGoPro DeBold-90ms-RKSJ-H;
+            }
+
+            .clsd-11, .clsd-12, .clsd-15, .clsd-5, .clsd-7 {
+                fill: #fff;
+            }
+
+            .clsd-11, .clsd-12, .clsd-13, .clsd-24, .clsd-5 {
+                font-weight: 700;
+            }
+
+            .clsd-6 {
+                fill: #f1f1f1;
+            }
+
+            .clsd-7, .clsd-8, .clsd-9 {
+                stroke: #717171;
+            }
+
+            .clsd-16, .clsd-17, .clsd-18, .clsd-19, .clsd-7, .clsd-8, .clsd-9 {
+                stroke-linejoin: round;
+            }
+
+            .clsd-7, .clsd-8 {
+                stroke-width: 4px;
+            }
+
+            .clsd-16, .clsd-17, .clsd-18, .clsd-19, .clsd-8, .clsd-9 {
+                fill: none;
+            }
+
+            .clsd-9 {
+                stroke-width: 3px;
+                stroke-dasharray: 9.75 5.85;
+            }
+
+            .clsd-10 {
+                fill: #ff7f00;
+            }
+
+            .clsd-11 {
+                font-size: 30px;
+            }
+
+            .clsd-11, .clsd-12, .clsd-13, .clsd-24 {
+                font-family: ShinMGoPro-Bold, ShinMGoPro Bold-90ms-RKSJ-H;
+            }
+
+            .clsd-12, .clsd-21 {
+                font-size: 36px;
+            }
+
+            .clsd-13 {
+                font-size: 12px;
+                fill: #717171;
+            }
+
+            .clsd-14 {
+                fill: #f06;
+            }
+
+            .clsd-16 {
+                stroke: #fff;
+                stroke-width: 2px;
+            }
+
+            .clsd-17, .clsd-18, .clsd-19 {
+                stroke: #717071;
+                stroke-width: 0.86px;
+            }
+
+            .clsd-17 {
+                stroke-dasharray: 1.51 1;
+            }
+
+            .clsd-18 {
+                stroke-dasharray: 1.47 0.98;
+            }
+
+            .clsd-19 {
+                stroke-dasharray: 1.45 0.97;
+            }
+
+            .clsd-20 {
+                fill: #b2e2f8;
+            }
+
+            .clsd-21 {
+                font-family: ShinMGoPro-Ultra, ShinMGoPro Ultra-90ms-RKSJ-H;
+            }
+
+            .clsd-22 {
+                letter-spacing: -0.03em;
+            }
+
+            .clsd-23 {
+                letter-spacing: 0.23em;
+            }
+
+            .clsd-24 {
+                font-size: 24px;
+            }
+
+            .clsd-25 {
+                letter-spacing: -0.5em;
+            }
+
+            .clsd-26 {
+                mix-blend-mode: multiply;
+            }
+
+            .clsd-27 {
+                fill: #f66;
+            }
+            </style>
+        </defs>
+
+        <g id="svg_group" transform="matrix(1,0,0,1,40,40)">
+
+            <g transform="matrix(1,0,0,1,20,20)">
+                <image xlink:href="./images/header.svg" width="1080" height="60"/>
+            </g>
+
+            <g transform="matrix(1,0,0,1,20,100)">
+                <image xlink:href="./images/header2.svg" width="1080" height="80"/>
+            </g>
+
+            <g transform="matrix(1,0,0,1,20,200)">
+                <image xlink:href="./images/bg.svg" width="1080"/>
+
+            </g>
+
+
+            <g xmlns="http://www.w3.org/2000/svg" id="post_its" data-name="post its" transform="matrix(1,0,0,1,20,20)">
+
+                <g xmlns="http://www.w3.org/2000/svg" id="shape">
+
+
+                    <polygon class="cls-12" id="poly1"  onclick="goToDetailPage('poly1')" points="261.22 199.7 183.38 303.75 269.41 344.3 320.62 296.37 261.22 199.7"/>
+                    <line class="cls-13" x1="269.41" y1="344.3" x2="261.22" y2="199.7"/>
+                    <line class="cls-14" x1="183.38" y1="303.75" x2="320.62" y2="296.37"/>
+
+
+                    <polygon class="cls-12" id="poly2"onclick="goToDetailPage('poly2')" points="499.83 295.07 499.83 208.17 412.93 208.17 372.17 248.93 372.17 335.83 459.07 335.83 499.83 295.07"/>
+                    <line class="cls-13" x1="459.07" y1="248.93" x2="459.07" y2="335.83"/>
+                    <line class="cls-15" x1="412.93" y1="295.07" x2="412.93" y2="208.17"/>
+                    <line class="cls-15" x1="499.83" y1="295.07" x2="412.93" y2="295.07"/>
+                    <line class="cls-16" x1="372.17" y1="335.83" x2="412.93" y2="295.07"/>
+                    <line class="cls-13" x1="372.17" y1="248.93" x2="459.07" y2="248.93"/>
+                    <line class="cls-13" x1="459.07" y1="248.93" x2="499.83" y2="208.17"/>
+
+
+                    <polygon class="cls-12" id="poly3" onclick="goToDetailPage('poly3')" points="688.42 264.43 620 201.8 551.58 274.6 620 342.2 688.42 264.43"/>
+                    <polyline class="cls-13" points="551.58 274.6 633.17 293.63 688.42 264.43"/>
+                    <polyline class="cls-13" points="620 201.8 633.17 293.63 620 342.2"/>
+                    <line class="cls-17" x1="606.83" y1="245.4" x2="620" y2="201.8"/>
+                    <line class="cls-18" x1="606.83" y1="245.4" x2="551.58" y2="274.6"/>
+                    <line class="cls-19" x1="688.42" y1="264.43" x2="606.83" y2="245.4"/>
+                    <line class="cls-20" x1="620" y1="342.2" x2="606.83" y2="245.4"/>
+
+
+                    <polygon class="cls-12" id="poly4" onclick="goToDetailPage('poly4')" points="804 198.65 760.89 212.66 734.24 249.33 734.24 294.67 760.89 331.34 804 345.35 847.11 331.34 873.76 294.67 873.76 249.33 847.11 212.66 804 198.65"/>
+                    <line class="cls-21" x1="846.8" y1="285.91" x2="804" y2="317"/>
+                    <line class="cls-21" x1="830.45" y1="235.59" x2="846.8" y2="285.91"/>
+                    <line class="cls-21" x1="777.55" y1="235.59" x2="830.45" y2="235.59"/>
+                    <line class="cls-21" x1="761.2" y1="285.91" x2="777.55" y2="235.59"/>
+                    <line class="cls-21" x1="804" y1="317" x2="761.2" y2="285.91"/>
+                    <line class="cls-22" x1="804" y1="317" x2="804" y2="345.35"/>
+                    <line class="cls-22" x1="734.24" y1="294.67" x2="761.2" y2="285.91"/>
+                    <line class="cls-22" x1="760.89" y1="212.66" x2="777.55" y2="235.59"/>
+                    <line class="cls-22" x1="847.11" y1="212.66" x2="830.45" y2="235.59"/>
+                    <line class="cls-22" x1="873.76" y1="294.67" x2="846.8" y2="285.91"/>
+                    <line class="cls-13" x1="846.8" y1="258.09" x2="804" y2="227"/>
+                    <line class="cls-13" x1="830.45" y1="308.41" x2="846.8" y2="258.09"/>
+                    <line class="cls-13" x1="777.55" y1="308.41" x2="830.45" y2="308.41"/>
+                    <line class="cls-13" x1="761.2" y1="258.09" x2="777.55" y2="308.41"/>
+                    <line class="cls-13" x1="804" y1="227" x2="761.2" y2="258.09"/>
+                    <line class="cls-13" x1="804" y1="227" x2="804" y2="198.65"/>
+                    <line class="cls-13" x1="734.24" y1="249.33" x2="761.2" y2="258.09"/>
+                    <line class="cls-13" x1="760.89" y1="331.34" x2="777.55" y2="308.41"/>
+                    <line class="cls-13" x1="847.11" y1="331.34" x2="830.45" y2="308.41"/>
+                    <line class="cls-13" x1="873.76" y1="249.33" x2="846.8" y2="258.09"/>
+
+                    <polygon class="cls-12" id="poly5" onclick="goToDetailPage('poly5')" points="988 197.75 923.7 234.88 923.7 309.13 988 346.25 1052.3 309.13 1052.3 234.88 988 197.75"/>
+                    <line class="cls-23" x1="1029.07" y1="295.71" x2="988" y2="224.57"/>
+                    <line class="cls-23" x1="946.93" y1="295.71" x2="1029.07" y2="295.71"/>
+                    <line class="cls-23" x1="988" y1="224.57" x2="946.93" y2="295.71"/>
+                    <line class="cls-24" x1="1029.07" y1="295.71" x2="988" y2="346.25"/>
+                    <line class="cls-24" x1="988" y1="346.25" x2="946.93" y2="295.71"/>
+                    <line class="cls-25" x1="988" y1="197.75" x2="988" y2="224.57"/>
+                    <line class="cls-25" x1="923.7" y1="309.13" x2="946.93" y2="295.71"/>
+                    <line class="cls-25" x1="1052.3" y1="309.13" x2="1029.07" y2="295.71"/>
+                    <line class="cls-24" x1="923.7" y1="234.88" x2="946.93" y2="295.71"/>
+                    <line class="cls-24" x1="923.7" y1="234.88" x2="988" y2="224.57"/>
+                    <line class="cls-24" x1="1052.3" y1="234.88" x2="1029.07" y2="295.71"/>
+                    <line class="cls-24" x1="1052.3" y1="234.88" x2="988" y2="224.57"/>
+                    <line class="cls-26" x1="1029.07" y1="248.29" x2="988" y2="319.43"/>
+                    <line class="cls-26" x1="946.93" y1="248.29" x2="1029.07" y2="248.29"/>
+                    <line class="cls-26" x1="988" y1="319.43" x2="946.93" y2="248.29"/>
+                    <line class="cls-27" x1="1029.07" y1="248.29" x2="988" y2="197.75"/>
+                    <line class="cls-27" x1="988" y1="197.75" x2="946.93" y2="248.29"/>
+                    <line class="cls-28" x1="988" y1="346.25" x2="988" y2="319.43"/>
+                    <line class="cls-28" x1="923.7" y1="234.88" x2="946.93" y2="248.29"/>
+                    <line class="cls-28" x1="1052.3" y1="234.88" x2="1029.07" y2="248.29"/>
+                    <line class="cls-27" x1="923.7" y1="309.13" x2="946.93" y2="248.29"/>
+                    <line class="cls-27" x1="923.7" y1="309.13" x2="988" y2="319.43"/>
+                    <line class="cls-27" x1="1052.3" y1="309.13" x2="1029.07" y2="248.29"/>
+                    <line class="cls-27" x1="1052.3" y1="309.13" x2="988" y2="319.43"/>
+                    <line class="cls-13" x1="1029.07" y1="248.29" x2="988" y2="319.43"/>
+                    <line class="cls-13" x1="946.93" y1="248.29" x2="1029.07" y2="248.29"/>
+                    <line class="cls-13" x1="988" y1="319.43" x2="946.93" y2="248.29"/>
+                    <line class="cls-13" x1="1029.07" y1="248.29" x2="988" y2="197.75"/>
+                    <line class="cls-13" x1="988" y1="197.75" x2="946.93" y2="248.29"/>
+                    <line class="cls-13" x1="988" y1="346.25" x2="988" y2="319.43"/>
+                    <line class="cls-13" x1="923.7" y1="234.88" x2="946.93" y2="248.29"/>
+                    <line class="cls-13" x1="1052.3" y1="234.88" x2="1029.07" y2="248.29"/>
+                    <line class="cls-13" x1="923.7" y1="309.13" x2="946.93" y2="248.29"/>
+                    <line class="cls-13" x1="923.7" y1="309.13" x2="988" y2="319.43"/>
+                    <line class="cls-13" x1="1052.3" y1="309.13" x2="1029.07" y2="248.29"/>
+                    <line class="cls-13" x1="1052.3" y1="309.13" x2="988" y2="319.43"/>
+
+
+                </g>
+
+                <text class="cls-8" transform="translate(204 393.27)">正四面体
+                    <tspan x="0" y="41">正三角形</tspan>
+                    <tspan x="41.39" y="82">4</tspan>
+                    <tspan x="41.39" y="123">6</tspan>
+                    <tspan x="41.39" y="179">3</tspan>
+                    <tspan x="41.39" y="236">4</tspan>
+                </text>
+
+                <text class="cls-8" transform="translate(388 393.27)">正六面体
+                    <tspan x="12" y="41">正方形</tspan>
+                    <tspan x="41.39" y="82">6</tspan>
+                    <tspan x="34.78" y="123">12</tspan>
+                    <tspan x="41.39" y="179">3</tspan>
+                    <tspan x="41.39" y="236">8</tspan>
+                </text>
+                <text class="cls-8" transform="translate(572 393.27)">正八面体
+                    <tspan x="0" y="41">正三角形</tspan>
+                    <tspan x="41.39" y="82">8</tspan>
+                    <tspan x="34.78" y="123">12</tspan>
+                    <tspan x="41.39" y="179">4</tspan>
+                    <tspan x="41.39" y="236">6</tspan>
+                </text>
+                <text class="cls-8" transform="translate(756 393.27) scale(0.8 1)">正十二面体</text>
+                <text class="cls-8" transform="translate(756 434.27)">正五角形
+                    <tspan x="34.78" y="41">12</tspan>
+                    <tspan x="34.78" y="82">30</tspan>
+                    <tspan x="41.39" y="138">3</tspan>
+                    <tspan x="34.78" y="195">20</tspan>
+                </text>
+                <text class="cls-8" transform="translate(940 393.27) scale(0.8 1)">正二十面体</text>
+                <text class="cls-8" transform="translate(940 434.27)">正三角形
+                    <tspan x="34.78" y="41">20</tspan>
+                    <tspan x="34.78" y="82">30</tspan>
+                    <tspan x="41.39" y="138">5</tspan>
+                    <tspan x="34.78" y="195">12</tspan>
+                </text>
+
+                <rect id="s1.1" onclick="showHideProperty('s1.1')" class="cls-11" x="202" y="370" width="100"
+                      height="30"/>
+                <rect id="s1.2" onclick="showHideProperty('s1.2')" class="cls-11" x="202" y="411" width="100"
+                      height="30"/>
+                <rect id="s1.3" onclick="showHideProperty('s1.3')" class="cls-11" x="202" y="452" width="100"
+                      height="30"/>
+                <rect id="s1.4" onclick="showHideProperty('s1.4')" class="cls-11" x="202" y="493" width="100"
+                      height="30"/>
+                <rect id="s1.5" onclick="showHideProperty('s1.5')" class="cls-11" x="202" y="537" width="100"
+                      height="50"/>
+                <rect id="s1.6" onclick="showHideProperty('s1.6')" class="cls-11" x="202" y="604" width="100"
+                      height="30"/>
+
+
+                <rect id="s2.1" onclick="showHideProperty('s2.1')" class="cls-11" x="386" y="370" width="100"
+                      height="30"/>
+                <rect id="s2.2" onclick="showHideProperty('s2.2')" data-name="" class="cls-11" x="386" y="411"
+                      width="100" height="30"/>
+                <rect id="s2.3" onclick="showHideProperty('s2.3')" data-name="" class="cls-11" x="386" y="452"
+                      width="100" height="30"/>
+                <rect id="s2.4" onclick="showHideProperty('s2.4')" data-name="" class="cls-11" x="386" y="493"
+                      width="100" height="30"/>
+                <rect id="s2.5" onclick="showHideProperty('s2.5')" data-name="" class="cls-11" x="386" y="537"
+                      width="100" height="50"/>
+                <rect id="s2.6" onclick="showHideProperty('s2.6')" data-name="" class="cls-11" x="386" y="604"
+                      width="100" height="30"/>
+
+                <rect id="s3.1" onclick="showHideProperty('s3.1')" data-name="" class="cls-11" x="570" y="370"
+                      width="100" height="30"/>
+                <rect id="s3.2" onclick="showHideProperty('s3.2')" data-name="" class="cls-11" x="570" y="411"
+                      width="100" height="30"/>
+                <rect id="s3.3" onclick="showHideProperty('s3.3')" data-name="" class="cls-11" x="570" y="452"
+                      width="100" height="30"/>
+                <rect id="s3.4" onclick="showHideProperty('s3.4')" data-name="" class="cls-11" x="570" y="493"
+                      width="100" height="30"/>
+                <rect id="s3.5" onclick="showHideProperty('s3.5')" data-name="" class="cls-11" x="570" y="537"
+                      width="100" height="50"/>
+                <rect id="s3.6" onclick="showHideProperty('s3.6')" data-name="" class="cls-11" x="570" y="604"
+                      width="100" height="30"/>
+
+                <rect id="s4.1" onclick="showHideProperty('s4.1')" data-name="" class="cls-11" x="754" y="370"
+                      width="100" height="30"/>
+                <rect id="s4.2" onclick="showHideProperty('s4.2')" data-name="" class="cls-11" x="754" y="411"
+                      width="100" height="30"/>
+                <rect id="s4.3" onclick="showHideProperty('s4.3')" data-name="" class="cls-11" x="754" y="452"
+                      width="100" height="30"/>
+                <rect id="s4.4" onclick="showHideProperty('s4.4')" data-name="" class="cls-11" x="754" y="493"
+                      width="100" height="30"/>
+                <rect id="s4.5" onclick="showHideProperty('s4.5')" data-name="" class="cls-11" x="754" y="537"
+                      width="100" height="50"/>
+                <rect id="s4.6" onclick="showHideProperty('s4.6')" data-name="" class="cls-11" x="754" y="604"
+                      width="100" height="30"/>
+
+                <rect id="s5.1" onclick="showHideProperty('s5.1')" data-name="" class="cls-11" x="938" y="370"
+                      width="100" height="30"/>
+                <rect id="s5.2" onclick="showHideProperty('s5.2')" data-name="" class="cls-11" x="938" y="411"
+                      width="100" height="30"/>
+                <rect id="s5.3" onclick="showHideProperty('s5.3')" data-name="" class="cls-11" x="938" y="452"
+                      width="100" height="30"/>
+                <rect id="s5.4" onclick="showHideProperty('s5.4')" data-name="" class="cls-11" x="938" y="493"
+                      width="100" height="30"/>
+                <rect id="s5.5" onclick="showHideProperty('s5.5')" data-name="" class="cls-11" x="938" y="537"
+                      width="100" height="50"/>
+                <rect id="s5.6" onclick="showHideProperty('s5.6')" data-name="" class="cls-11" x="938" y="604"
+                      width="100" height="30"/>
+
+
+                <g xmlns="http://www.w3.org/2000/svg" id="loupe_icon" data-name="loupe icon">
+
+                    <circle class="cls-31" onclick="showLightBox('lb1')" cx="322" cy="508" r="15"/>
+                    <line class="cls-32" x1="328.58" y1="514.67" x2="323.92" y2="510.01"/>
+                    <circle class="cls-33" cx="320.38" cy="506.47" r="5"/>
+
+                    <circle class="cls-30" onclick="showLightBox('lb1')" cx="322" cy="562" r="15"/>
+                    <line class="cls-32" x1="328.58" y1="568.67" x2="323.92" y2="564.01"/>
+                    <circle class="cls-33" cx="320.38" cy="560.47" r="5"/>
+
+                    <circle class="cls-34" onclick="showLightBox('lb1')" cx="322" cy="619" r="15"/>
+                    <line class="cls-32" x1="328.58" y1="625.67" x2="323.92" y2="621.01"/>
+                    <circle class="cls-33" cx="320.38" cy="617.47" r="5"/>
+
+                    <circle class="cls-31" cx="506" onclick="showLightBox('lb1')" cy="508" r="15"/>
+                    <line class="cls-32" x1="512.58" y1="514.67" x2="507.92" y2="510.01"/>
+                    <circle class="cls-33" cx="504.38" cy="506.47" r="5"/>
+                    <line class="cls-32" x1="512.58" y1="568.67" x2="507.92" y2="564.01"/>
+                    <circle class="cls-33" cx="504.38" cy="560.47" r="5"/>
+
+                    <circle class="cls-30" cx="506" cy="562" r="15"/>
+                    <line class="cls-32" x1="512.58" y1="568.67" x2="507.92" y2="564.01"/>
+                    <circle class="cls-33" cx="504.38" cy="560.47" r="5"/>
+
+                    <circle class="cls-34" onclick="showLightBox('lb1')" cx="506" cy="619" r="15"/>
+                    <line class="cls-32" x1="512.58" y1="625.67" x2="507.92" y2="621.01"/>
+                    <circle class="cls-33" cx="504.38" cy="617.47" r="5"/>
+
+                    <circle class="cls-31" cx="690" onclick="showLightBox('lb1')" cy="508" r="15"/>
+                    <line class="cls-32" x1="696.58" y1="514.67" x2="691.92" y2="510.01"/>
+                    <circle class="cls-33" cx="688.38" cy="506.47" r="5"/>
+
+                    <circle class="cls-30" cx="690" onclick="showLightBox('lb1')" cy="562" r="15"/>
+                    <line class="cls-32" x1="696.58" y1="568.67" x2="691.92" y2="564.01"/>
+                    <circle class="cls-33" cx="688.38" cy="560.47" r="5"/>
+
+                    <circle class="cls-34" cx="690" onclick="showLightBox('lb1')" cy="619" r="15"/>
+                    <line class="cls-32" x1="696.58" y1="625.67" x2="691.92" y2="621.01"/>
+                    <circle class="cls-33" cx="688.38" cy="617.47" r="5"/>
+
+                    <circle class="cls-31" cx="874" onclick="showLightBox('lb1')" cy="508" r="15"/>
+                    <line class="cls-32" x1="880.58" y1="514.67" x2="875.92" y2="510.01"/>
+                    <circle class="cls-33" cx="872.38" cy="506.47" r="5"/>
+
+                    <circle class="cls-30" cx="874" onclick="showLightBox('lb1')" cy="562" r="15"/>
+                    <line class="cls-32" x1="880.58" y1="568.67" x2="875.92" y2="564.01"/>
+                    <circle class="cls-33" cx="872.38" cy="560.47" r="5"/>
+
+                    <circle class="cls-34" cx="874" onclick="showLightBox('lb1')" cy="619" r="15"/>
+                    <line class="cls-32" x1="880.58" y1="625.67" x2="875.92" y2="621.01"/>
+                    <circle class="cls-33" cx="872.38" cy="617.47" r="5"/>
+
+                    <circle class="cls-31" cx="1058" onclick="showLightBox('lb1')" cy="508" r="15"/>
+                    <line class="cls-32" x1="1064.58" y1="514.67" x2="1059.92" y2="510.01"/>
+                    <circle class="cls-33" cx="1056.38" cy="506.47" r="5"/>
+
+                    <circle class="cls-30" cx="1058" onclick="showLightBox('lb1')" cy="562" r="15"/>
+                    <line class="cls-32" x1="1064.58" y1="568.67" x2="1059.92" y2="564.01"/>
+                    <circle class="cls-33" cx="1056.38" cy="560.47" r="5"/>
+
+                    <circle class="cls-34" cx="1058" onclick="showLightBox('lb1')" cy="619" r="15"/>
+                    <line class="cls-32" x1="1064.58" y1="625.67" x2="1059.92" y2="621.01"/>
+                    <circle class="cls-33" cx="1056.38" cy="617.47" r="5"/>
+                </g>
+
+            </g>
+
+            <rect xmlns="http://www.w3.org/2000/svg" id="btn-begin2" class="cls-9" x="390" y="672" width="300"
+                  height="56"/>
+            <rect xmlns="http://www.w3.org/2000/svg" id="btn-begin1" class="cls-30" x="390" y="672" width="300"
+                  height="56"/>
+            <text xmlns="http://www.w3.org/2000/svg" class="cls-29" onclick="backToTheBeginning()"
+                  transform="translate(432 714.47)">始めにもどる
+            </text>
+
+    </svg>
+
+</div>
+
+
+<div class="modal fade" id="lb1" role="dialog">
+
+    <div class="modal-dialog" style="  width: 800px;height:472px;">
+        <!-- Modal content-->
+        <div class="modal-content" style="width:800px; height:472px">
+            <svg width="800" height="472" id="rootSVG" xmlns="http://www.w3.org/2000s/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" style="left: 0px;">
+                <g xmlns="http://www.w3.org/2000/svg"  transform="matrix(1,0,0,1,-200,-173)">
+                    <rect class="cls2-2" x="200" y="173" width="800" height="472"/>
+                    <text class="cls2-5" onclick="closeLightBox('lb1')" transform="translate(867 614.68)">もどる</text>
+                </g>
+            </svg>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="divBody2" style="position: relative; left: 0px; top: 0px; overflow: hidden;display: none">
+    <svg class="rootSVG" width="1200" height="818" viewBox="0 0 1200 818" id="rootSVG" xmlns="http://www.w3.org/2000s/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         style="left: 0px;">
+
+        <g id="svg_group" transform="matrix(1,0,0,1,40,40)">
+            <g transform="matrix(1,0,0,1,20,20)">
+                <image xlink:href="./images/header.svg" width="1080" height="60"/>
+            </g>
+
+            <g transform="matrix(1,0,0,1,20,100)">
+                <image xlink:href="./images/header3.svg" width="1080" height="80"/>
+            </g>
+
+            <g xmlns="http://www.w3.org/2000/svg" id="post_its" data-name="post its" transform="matrix(1,0,0,1,20,20)">
+                <g id="bass">
+                    <g id="title">
+                        <rect class="clsd-2" y="180" width="1080" height="460"/>
+                        <path class="clsd-3" d="M1050,0H205V60h845a30,30,0,0,0,0-60Z"/>
+                        <path class="clsd-4" d="M205,0H30a30,30,0,0,0,0,60H205Z"/>
+                        <text class="clsd-5" transform="translate(19.17 45.99)">正多面体</text>
+                    </g>
+                    <rect class="clsd-6" y="80" width="1080" height="80"/>
+                </g>
+                <g id="buttons">
+                    <g id="btn_deploy" data-name="展開 buttons">
+                        <rect class="clsd-10" x="880" y="560" width="180" height="60" rx="30"/>
+                        <text class="clsd-11" transform="translate(940 601.67)">展開</text>
+                    </g>
+
+                    <g id="button_title" data-name="button title">
+                        <text class="clsd-13" transform="translate(26 553.56)">正四面体</text>
+                        <text class="clsd-13" transform="translate(106 553.56)">正六面体</text>
+                        <text class="clsd-13" transform="translate(186 553.56)">正八面体</text>
+                        <text class="clsd-13" transform="translate(260 553.56)">正十二面体</text>
+                        <text class="clsd-13" transform="translate(340 553.56)">正二十面体</text>
+                    </g>
+                    <g id="図形切替_buttons" data-name="図形切替 buttons">
+
+                        <g class="btn_shape" id="shape5_button_H" data-name="shape5 button H">
+                            <circle class="clsd-20" cx="370" cy="590" r="30"/>
+                            <polygon class="clsd-16"
+                                     points="370 572.89 355.19 581.45 355.19 598.55 370 607.11 384.81 598.55 384.81 581.45 370 572.89"/>
+                            <line class="clsd-17" x1="379.46" y1="584.54" x2="370" y2="600.93"/>
+                            <line class="clsd-17" x1="360.54" y1="584.54" x2="379.46" y2="584.54"/>
+                            <line class="clsd-17" x1="370" y1="600.93" x2="360.54" y2="584.54"/>
+                            <line class="clsd-18" x1="379.46" y1="584.54" x2="370" y2="572.89"/>
+                            <line class="clsd-18" x1="370" y1="572.89" x2="360.54" y2="584.54"/>
+                            <line class="clsd-19" x1="370" y1="607.11" x2="370" y2="600.93"/>
+                            <line class="clsd-19" x1="355.18" y1="581.45" x2="360.54" y2="584.54"/>
+                            <line class="clsd-19" x1="384.82" y1="581.45" x2="379.46" y2="584.54"/>
+                            <line class="clsd-18" x1="355.18" y1="598.55" x2="360.54" y2="584.54"/>
+                            <line class="clsd-18" x1="355.18" y1="598.55" x2="370" y2="600.93"/>
+                            <line class="clsd-18" x1="384.82" y1="598.55" x2="379.46" y2="584.54"/>
+                            <line class="clsd-18" x1="384.82" y1="598.55" x2="370" y2="600.93"/>
+                            <line class="clsd-16" x1="379.46" y1="584.54" x2="370" y2="600.93"/>
+                            <line class="clsd-16" x1="360.54" y1="584.54" x2="379.46" y2="584.54"/>
+                            <line class="clsd-16" x1="370" y1="600.93" x2="360.54" y2="584.54"/>
+                            <line class="clsd-16" x1="379.46" y1="584.54" x2="370" y2="572.89"/>
+                            <line class="clsd-16" x1="370" y1="572.89" x2="360.54" y2="584.54"/>
+                            <line class="clsd-16" x1="370" y1="607.11" x2="370" y2="600.93"/>
+                            <line class="clsd-16" x1="355.18" y1="581.45" x2="360.54" y2="584.54"/>
+                            <line class="clsd-16" x1="384.82" y1="581.45" x2="379.46" y2="584.54"/>
+                            <line class="clsd-16" x1="355.18" y1="598.55" x2="360.54" y2="584.54"/>
+                            <line class="clsd-16" x1="355.18" y1="598.55" x2="370" y2="600.93"/>
+                            <line class="clsd-16" x1="384.82" y1="598.55" x2="379.46" y2="584.54"/>
+                            <line class="clsd-16" x1="384.82" y1="598.55" x2="370" y2="600.93"/>
+                        </g>
+
+                        <g class="btn_shape" id="shape4_button_H" data-name="shape4 button H">
+                            <circle class="clsd-20" cx="290" cy="590" r="30"/>
+                            <polygon class="clsd-16"
+                                     points="290 573.1 280.07 576.33 273.93 584.78 273.93 595.22 280.07 603.67 290 606.9 299.93 603.67 306.07 595.22 306.07 584.78 299.93 576.33 290 573.1"/>
+                            <line class="clsd-16" x1="299.86" y1="586.8" x2="290" y2="579.63"/>
+                            <line class="clsd-16" x1="296.09" y1="598.39" x2="299.86" y2="586.8"/>
+                            <line class="clsd-16" x1="283.91" y1="598.39" x2="296.09" y2="598.39"/>
+                            <line class="clsd-16" x1="280.14" y1="586.8" x2="283.91" y2="598.39"/>
+                            <line class="clsd-16" x1="290" y1="579.63" x2="280.14" y2="586.8"/>
+                            <line class="clsd-16" x1="290" y1="579.63" x2="290" y2="573.1"/>
+                            <line class="clsd-16" x1="273.93" y1="584.78" x2="280.14" y2="586.8"/>
+                            <line class="clsd-16" x1="280.07" y1="603.67" x2="283.91" y2="598.39"/>
+                            <line class="clsd-16" x1="299.93" y1="603.67" x2="296.09" y2="598.39"/>
+                            <line class="clsd-16" x1="306.07" y1="584.78" x2="299.86" y2="586.8"/>
+                        </g>
+
+                        <g class="btn_shape" id="shape3_button_H" data-name="shape3 button H">
+                            <circle class="clsd-20" cx="210" cy="590" r="30"/>
+                            <polygon class="clsd-16"
+                                     points="225.76 588.25 210 573.83 194.24 590.6 210 606.17 225.76 588.25"/>
+                            <polyline class="clsd-16" points="194.24 590.6 213.03 594.98 225.76 588.25"/>
+                            <polyline class="clsd-16" points="210 573.83 213.03 594.98 210 606.17"/>
+                        </g>
+
+
+                        <g class="btn_shape" id="shape2_button_H" data-name="shape2 button H">
+
+                            <circle  class="clsd-20" cx="130" cy="590" r="30"/>
+                            <polygon class="clsd-16"
+                                     points="143.24 594.78 143.24 576.76 125.22 576.76 116.76 585.22 116.76 603.24 134.78 603.24 143.24 594.78"/>
+                            <line class="clsd-16" x1="134.78" y1="585.22" x2="134.78" y2="603.24"/>
+                            <line class="clsd-16" x1="116.76" y1="585.22" x2="134.78" y2="585.22"/>
+                            <line class="clsd-16" x1="134.78" y1="585.22" x2="143.24" y2="576.76"/>
+
+                        </g>
+
+                        <g class="btn_shape" id="shape1_button_H" data-name="shape1 button H">
+                            <circle class="clsd-20" cx="50" cy="590" r="30"/>
+                            <polygon class="clsd-16"
+                                     points="52.12 573.34 34.19 597.32 54.01 606.66 65.81 595.62 52.12 573.34"/>
+                            <line class="clsd-16" x1="54.01" y1="606.66" x2="52.12" y2="573.34"/>
+                        </g>
+
+                    </g>
+                </g>
+                <g id="dialog">
+                    <g id="手順2">
+                        <rect class="clsd-10" x="215.1" y="122.51" width="84" height="28" rx="14"/>
+                        <path class="clsd-15"
+                              d="M254.25,134.52h1.37c.84,0,1.09.35,1.09,1.09,0,1-.75,1-1.09,1h-1.37v.93H256a1,1,0,1,1,0,2.07h-.26a1,1,0,0,1,.39.79c0,.75-1,1.46-1.39,1.78.26.11,1.5.5,1.64.59a1,1,0,0,1,.52.91,1.41,1.41,0,0,1-1.4,1.45,8.65,8.65,0,0,1-4.37-2.11,8,8,0,0,1-2.25-3.41h-1v2.7c.57-.06,1.44-.14,1.71-.14a1,1,0,0,1,1,1.1,1.07,1.07,0,0,1-.9,1.16,45.89,45.89,0,0,1-5.25.56c-1.07,0-1.07-1.13-1.07-1.27,0-1.18.91-1.21,1.87-1.27v-2.84h-1.57a34.13,34.13,0,0,1-.61,3.75c-.17.7-.44,1.66-1.35,1.66-.43,0-1.59-.35-1.59-1.37a6.88,6.88,0,0,1,.46-1.9,21.47,21.47,0,0,0,.66-5.34v-5.57c0-1.88.36-2.22,2.22-2.22h10.75c1.88,0,2.22.38,2.22,2.22v.62c0,2-.48,2.2-2.41,2.2a.82.82,0,0,1,.16.47Zm-7.74-.41a.77.77,0,0,1,.14-.47H243.9v2.75c0,.52,0,.77,0,1.13h2.63v-.93h-1.39c-.34,0-1.07,0-1.07-1,0-.73.21-1.1,1.07-1.1h1.39Zm-2.3-3.35c-.2,0-.31.09-.31.29v.7h9.62a.28.28,0,0,0,.3-.31v-.39a.26.26,0,0,0-.3-.29Zm4.73,3.76h2.79v-.41a.8.8,0,0,1,.14-.47h-3.11a.82.82,0,0,1,.18.47Zm2.79,2.07h-2.79v.93h2.79Zm-.25,3a4.3,4.3,0,0,0,1.21,1.43c.2-.2,1.06-1.22,1.27-1.43Z"/>
+                        <path class="clsd-15"
+                              d="M261.07,144a1,1,0,0,1-1.16,1.16c-1,0-1.32-.38-1.32-1.16V130.8c0-1.66.79-2.13,2.13-2.13H264c1.41,0,2.12.52,2.12,2.13v2.13c0,1.6-.71,2.12-2.12,2.12h-2.9Zm2.65-12.87v-.37a.31.31,0,0,0-.34-.34h-2a.31.31,0,0,0-.34.34v.37Zm0,1.52h-2.65v.72h2.31a.3.3,0,0,0,.34-.32Zm6.77,6.26a1.09,1.09,0,1,1,0,2.18h-.7v2.68c0,.32,0,1.12-1.12,1.12s-1.27-.46-1.27-1.12v-2.68h-1.59c-.3,2.25-1.61,3.75-2.41,3.75a1.42,1.42,0,0,1-1.41-1.32c0-.36.17-.54.46-.86a3.22,3.22,0,0,0,.86-1.57h-.74a1.09,1.09,0,1,1,0-2.18h.9v-1.15h-.66a1,1,0,0,1-1.06-1,1,1,0,0,1,1.13-1.07h7.34a1,1,0,0,1,1.13,1,1,1,0,0,1-1,1.07h-.56v1.15Zm-3.09,0v-1.15h-1.48v1.15Zm1.68-3.83c-1.29,0-2.11-.43-2.11-2.12V130.8c0-1.68.79-2.13,2.11-2.13h3.3c1.38,0,2.13.49,2.13,2.13v11.9c0,1.91-.32,2.34-2.84,2.34-.73,0-1.82,0-1.82-1.41,0-1.22.8-1.25,1.14-1.25h.68c.34,0,.37-.16.37-.54v-6.79Zm.36-4H272v-.37a.3.3,0,0,0-.33-.34h-1.93a.31.31,0,0,0-.34.34Zm0,1.52v.4a.3.3,0,0,0,.34.32H272v-.72Z"/>
+                        <text class="clsd-21" transform="translate(86.19 134)">
+                            <tspan class="clsd-22">手</tspan>
+                            <tspan class="clsd-23" x="34.98" y="0">順</tspan>
+                            <tspan x="79.15" y="0">2</tspan>
+                        </text>
+                        <text class="clsd-24" transform="translate(213.77 110.69)">図形をドラッグ・タップして視点を自由に変更することができます
+                            <tspan class="clsd-25" x="720" y="0">。</tspan>
+                            <tspan x="0" y="36">　　　　を押すと展開のアニメーションを確認できます</tspan>
+                            <tspan class="clsd-25" x="600" y="36">。</tspan>
+                        </text>
+                        <g id="hand_2" data-name="hand 2">
+                            <path class="clsd-15"
+                                  d="M42.5,136.11c-6,0-10.42-3.57-12-9.8-1.81-7.1.89-13.41,7.22-16.88,3.6-2,7.39-3.6,11.06-5.19l3-1.29a5.52,5.52,0,0,1,2.1-.41,3.73,3.73,0,0,1,3,1.16,5,5,0,0,1,.7,4.94,9.32,9.32,0,0,1-1.3,2.06H69.49a5.62,5.62,0,0,1,4.15,1.52,4.65,4.65,0,0,1,1.3,3.46c0,2.42-1.77,4.88-5.51,4.9h-6.1a4.51,4.51,0,0,1-.35,2.31,4.33,4.33,0,0,1-1.54,1.83,7,7,0,0,1,0,2.28,4.59,4.59,0,0,1-1.65,2.7,4.59,4.59,0,0,1-.19,3.37c-1.31,3-4.3,3-5.57,3H50.37l-3.24,0c-1.38,0-2.76,0-4.14.06Z"/>
+                            <path class="clsd-4"
+                                  d="M53.83,105a1.48,1.48,0,0,1,1.06.3,2.51,2.51,0,0,1,.31,2.26,6.33,6.33,0,0,1-2.11,2.58c-1.66,1.1-3.53,1.91-5.66,3H69.48c2,0,3,.87,3,2.44s-1.11,2.43-3,2.44H59.56c2.19,3,1.5,4.84-1.4,5.16a4.38,4.38,0,0,1,.82,3.32c-.23,1.28-2.06,2-2.68,2.27.9.91,1.59,1.9,1,3.23s-2,1.5-3.29,1.5h-.38l-6.51,0c-1.41,0-2.81,0-4.22.06H42.5c-5.48,0-8.46-3.5-9.58-7.92-1.51-5.91.56-11.09,6-14.06,4.44-2.43,9.18-4.34,13.83-6.39a2.83,2.83,0,0,1,1.09-.2m0-5a7.92,7.92,0,0,0-3.11.62L47.77,102c-3.72,1.61-7.56,3.27-11.26,5.29-7.4,4.05-10.55,11.41-8.44,19.69,1.87,7.32,7.26,11.68,14.43,11.68h.57c1.19,0,2.48,0,4.06,0l3.22,0H54c1.46,0,5.89,0,7.86-4.49a7.29,7.29,0,0,0,.6-3.56,6.75,6.75,0,0,0,1.41-3.06,8.67,8.67,0,0,0,.14-1.7,6.49,6.49,0,0,0,1.22-1.85,7,7,0,0,0,.31-.82h3.88c4.62,0,7.91-3,8-7.36a7.26,7.26,0,0,0-2-5.25,8,8,0,0,0-5.94-2.27H60.22a7.5,7.5,0,0,0-1.54-6.13,6.25,6.25,0,0,0-4.85-2Z"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+
+            <g id="home_button_S" data-name="home button S">
+                <rect class="clsd-4" x="390" y="672" width="300" height="56"/>
+                <text class="clsd-12" transform="translate(432 714.47)">始めに戻る</text>
+            </g>
+            <g id="home_button_H" data-name="home button H" onclick="backToTablePage()">
+                <rect class="clsd-4" x="390" y="672" width="300" height="56"/>
+                <text class="clsd-12" transform="translate(432 714.47)">表にもどる</text>
+            </g>
+
+            <g id="svg_group_1" transform="matrix(1,0,0,1,560,350)" viewBox="0 0 1080 300">
+                <defs>
+                        <rect id="rect" x="-540" y="-150" width="1080" height="300" fill="#f5f3ed"></rect>
+                        <clipPath id="clip">
+                              <use xlink:href="#rect"/>
+                        </clipPath>
+                  </defs>
+                  <use xlink:href="#rect"/>
+                <g id="main_svg" clip-path="url(#clip)">
+                    </g>
+                <rect id="event_drag"  class="ui-widget-content" x="-540" y="-150" width="1080" height="300" fill="#ffffff" fill-opacity="0"></rect>
+            </g>
+
+    </svg>
+
+</div>
+
 
 </body>
+
 </html>

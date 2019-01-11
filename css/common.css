@@ -1,0 +1,36 @@
+@font-face {
+    font-family: ShinMGoPro-Bold;
+    font-weight: bold;
+    src: url("../fonts/A-OTF-ShinMGoPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ShinMGoPro-DeBold;
+    font-weight: bold;
+    src: url("../fonts/A-OTF-ShinMGoPro-DeBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ShinMGoPro-Ultra;
+    font-weight: bold;
+    src: url("../fonts/A-OTF-ShinMGoPro-Ultra.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: #FFFFFF;
+
+    /* disable selected */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
